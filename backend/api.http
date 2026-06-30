@@ -1,0 +1,56 @@
+POST http://localhost:9080/register HTTP/1.1
+Content-Type:application/json
+
+{
+  "username":"bob",
+  "password":"bob",
+  "email":"bob@gmail.com",
+  "name":"bob" 
+}
+
+###
+
+POST http://localhost:9080/login HTTP/1.1
+Content-Type:application/json
+
+{
+  "email":"bob@gmail.com",
+  "password":"bob"
+}
+ 
+###
+
+GET http://localhost:9080/get_user_and_profile
+Authorization: Bearer 6bfeebc872b9b386a0f3dc2fbada5c2ce1e781f682e37f87d492e9ce8add53f0
+
+
+
+
+###  
+POST  http://localhost:9080/update_profile_data
+Content-Type:application/json
+  
+{
+  "token":"b250f01e80fbfde06f97ffb4e51e57159d76d207dfab79332d07edc4faeffd6b",
+  "bio": "Senior technology leader",
+  "currentPost":"CTO",
+  "pastWork":[
+    {
+      "company":"Microsoft",
+      "position":"CTO",
+      "year":"2+"
+    }
+  ],
+  "education":[
+    {
+      "School":"IIT",
+      "degree":"B.tech",
+      "fieldOfStudy":"2015-2019"
+    }
+  ]
+}
+
+
+
+###
+GET  http://localhost:9080/user/get_all_users
