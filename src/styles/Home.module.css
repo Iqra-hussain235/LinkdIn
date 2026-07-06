@@ -22,6 +22,22 @@ height: 80vh;
 
 .mainContainer_left > p:nth-child(1){
     font-size: 2.9rem;
+    background: linear-gradient(45deg,#000000,#b2b2b2);
+    background-clip: text;
+    font-weight: bold;
+    /* -webkit-text-fill-color: transparent;
+    animation: animationHomePageBreathEffect 3s linear infinite ; */
+}
+
+
+@keyframes animationHomePageBreathEffect{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    
 }
 
 .mainContainer__left > p:nth-child(2){
@@ -40,4 +56,10 @@ height: 80vh;
     padding-inline:1.2rem;
     padding-block: 0.8;
 }
+
+.buttonJoin{
+    background-color: rgb(197,44,208,0.8);
+    transform: scale(1.05);
+}
+
 
